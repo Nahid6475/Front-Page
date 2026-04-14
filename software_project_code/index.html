@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MemoMind - আপনার বাংলা AI সহকারী</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-text">
+            <h1>MemoMind <span>বাংলা</span></h1>
+            <p>Your Bangla Intelligent Assistant</p>
+        </div>
+        <div class="auth-section" id="authSection">
+            <div class="user-info" id="userInfo" style="display: none;">
+                <span>👤</span>
+                <span id="userName"></span>
+            </div>
+            <button class="btn btn-outline" id="loginBtn">🔐 লগইন</button>
+            <button class="btn btn-primary" id="registerBtn">📝 রেজিস্টার</button>
+            <button class="btn btn-danger" id="logoutBtn" style="display: none;">🚪 লগআউট</button>
+            <a href="dashboard.html" class="btn btn-success" id="dashboardLinkBtn">📊 ড্যাশবোর্ড</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>🌟 স্বাগতম MemoMind-এ</h1>
+        <p>আপনার ব্যক্তিগত বাংলা AI সহকারী যা মনে রাখে, খুঁজে দেয় এবং ডিজিটাল জীবনকে সহজ করে তোলে।</p>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+        <div class="feature-card" data-command="মনে রাখো"><div class="feature-icon">📝</div><h3>মনে রাখো</h3></div>
+        <div class="feature-card" data-command="মনে করে দাও"><div class="feature-icon">🔍</div><h3>মনে করে দাও</h3></div>
+        <div class="feature-card" data-command="গুগল সার্চ করো"><div class="feature-icon">🌐</div><h3>গুগল সার্চ</h3></div>
+        <div class="feature-card" data-command="ইউটিউব"><div class="feature-icon">🎬</div><h3>ইউটিউব</h3></div>
+        <div class="feature-card" data-command="অ্যালার্ম সেট করো সকাল ৮টা"><div class="feature-icon">⏰</div><h3>অ্যালার্ম</h3></div>
+        <div class="feature-card" data-command="ফাইল বের করে দাও"><div class="feature-icon">📁</div><h3>ফাইল সার্চ</h3></div>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header"><div class="chat-header-dot"></div><h3>MemoMind Assistant - Online</h3></div>
+        <div class="messages" id="chatArea"></div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="বাংলায় লিখুন... যেমন: মনে রাখো আমি বই পড়ব">
+            <button class="send-btn" id="sendBtn">পাঠান ➤</button>
+        </div>
+    </div>
+
+    <div class="footer">⚡ সম্পূর্ণ ফ্রন্টএন্ড প্রজেক্ট | স্মৃতি লোকাল স্টোরেজে সংরক্ষিত | AI ফিচার সিমুলেটেড</div>
+</div>
+
+<!-- Modals -->
+<div id="loginModal" class="modal"><div class="modal-content"><h3>🔐 লগইন</h3><input type="text" id="loginUser" placeholder="ইউজারনেম"><input type="password" id="loginPass" placeholder="পাসওয়ার্ড"><button class="btn btn-primary" id="confirmLoginBtn">প্রবেশ করুন</button><button class="btn btn-outline" id="closeLoginBtn">বন্ধ করুন</button></div></div>
+<div id="registerModal" class="modal"><div class="modal-content"><h3>📝 রেজিস্টার</h3><input type="text" id="regUser" placeholder="ইউজারনেম"><input type="password" id="regPass" placeholder="পাসওয়ার্ড (৪+ অক্ষর)"><button class="btn btn-primary" id="confirmRegisterBtn">নিবন্ধন করুন</button><button class="btn btn-outline" id="closeRegisterBtn">বন্ধ করুন</button></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
